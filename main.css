@@ -1,3 +1,100 @@
+/* resources used:
+https://css-tricks.com/fun-viewport-units/
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+https://css-tricks.com/dont-overthink-flexbox-grids/
+
+colors obtained with http://jxnblk.com/colorable/demos/text/
+*/
+
+
 body {
-color: #303030; background-color: #BDB8EF; /* Obtained with http://jxnblk.com/colorable/demos/text/ */
+color: #202020;
+background-color: #CFCDF4;
+
+display: flex;
+}
+
+.col {
+  margin: 5vw;
+}
+.content {
+order: 2;
+flex: 2;
+max-width: 50vw;
+
+font-family: Georgia;
+font-size: calc(16px + .5vw);
+line-height: calc(1.1em + 0.5vw);
+display: flex;
+flex-direction: column;
+}
+
+.tile {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+
+.nav {
+order: 1;
+display: flex;
+flex-direction: column;
+}
+
+.nav .square {
+  width: 20vw;
+  height: 20vw;
+  font-size: calc(16px + 1.5vw);
+  line-height: calc(1.1em + 0.5vw);
+  display: flex;
+}
+
+.nav ul {
+  padding: 0;
+  list-style-type: none;
+  margin: auto;
+  color: white;
+  font-family: Georgia;
+}
+
+.nav .square.alpha {
+  background-color: crimson;
+}
+
+.nav .square.beta {
+  background-color: steelblue;
+}
+
+@media screen and (max-width: 700px) {
+  .nav .square { font-size: calc(12px + 1vw); }
+}
+
+@media screen and (max-width: 500px) {
+  .nav .square { font-size: calc(12px + .5vw); }
+}
+.active {
+  list-style-type: square;
+}
+
+
+h1, h2 {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+}
+
+.post h1 {
+  display: block;
+  font-size: calc(18px + 1.5vw);
+}
+.post h2 {
+  display: block;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  margin-top: .5vw;
+  margin-bottom: 1vw;
+}
+
+.post .text {
+  text-align: justify;
 }
